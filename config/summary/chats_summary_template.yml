@@ -1,0 +1,14 @@
+chats:
+  - source:
+      chat_id: chat_id_for_summarization
+      chat_name: chat_nickname_for_summarization
+      max_messages: 499
+      summary_period_hours: 24
+    target:
+        chat_id: chat_id_or_phone_to_which_summary_will_be_sent
+    summary:
+      model: gpt-4o-mini
+      max_output_tokens: 400
+      prompt: chat_summary_daily
+    scheduler:
+      cron: "0 22 * * *"
